@@ -15,12 +15,26 @@
 
 // Count items
 
-const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
-const count = fruits.reduce((acc, fruit) => {
-  acc[fruit] = (acc[fruit] || 0) + 1;
-  return acc;
-}, {});
+// const count = fruits.reduce((acc, fruit) => {
+//   acc[fruit] = (acc[fruit] || 0) + 1;
+//   return acc;
+// }, {});
 
-console.log(count);
+// console.log(count);
 // { apple: 3, banana: 2, orange: 1 }
+
+// Advance reduce method
+const dogs = [
+  { name: "Rex", breed: "Pug", owner: "John" },
+  { name: "Bella", breed: "Labrador", owner: "Mike" },
+  { name: "Tiny", breed: "Pug", owner: "Sara" },
+];
+
+const pugOwners = dogs.reduce((acc, dog) => {
+  if (dog.breed === "Pug") acc.push(dog.owner);
+  return acc;
+}, []);
+
+console.log(pugOwners);
