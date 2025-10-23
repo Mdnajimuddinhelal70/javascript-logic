@@ -26,15 +26,27 @@
 // { apple: 3, banana: 2, orange: 1 }
 
 // Advance reduce method
-const dogs = [
-  { name: "Rex", breed: "Pug", owner: "John" },
-  { name: "Bella", breed: "Labrador", owner: "Mike" },
-  { name: "Tiny", breed: "Pug", owner: "Sara" },
+// const dogs = [
+//   { name: "Rex", breed: "Pug", owner: "John" },
+//   { name: "Bella", breed: "Labrador", owner: "Mike" },
+//   { name: "Tiny", breed: "Pug", owner: "Sara" },
+// ];
+
+// const pugOwners = dogs.reduce((acc, dog) => {
+//   if (dog.breed === "Pug") acc.push(dog.owner);
+//   return acc;
+// }, []);
+
+// console.log(pugOwners);
+
+const users = [
+  { name: "John", age: 25, gender: "male", salary: 40000 },
+  { name: "Sara", age: 22, gender: "female", salary: 35000 },
+  { name: "Mike", age: 30, gender: "male", salary: 50000 },
+  { name: "Lina", age: 28, gender: "female", salary: 45000 },
 ];
+const femaleNames = users
+  .filter((user) => user.gender === "female")
+  .map((user) => user.name);
 
-const pugOwners = dogs.reduce((acc, dog) => {
-  if (dog.breed === "Pug") acc.push(dog.owner);
-  return acc;
-}, []);
-
-console.log(pugOwners);
+console.log(femaleNames); // ["Sara", "Lina"]
