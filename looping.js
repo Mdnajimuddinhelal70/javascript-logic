@@ -38,12 +38,10 @@
 //     console.log(pattern)
 // }
 
-
 // //=============১ থেকে ১০ পর্যন্ত সংখ্যাগুলা প্রিন্ট কর।
 // for(let i = 1; i <= 10; i++){
 //     console.log("Number:", i)
 // };
-
 
 // //============= ১ থেকে ২০ পর্যন্ত শুধু even সংখ্যাগুলা প্রিন্ট কর।
 
@@ -53,7 +51,6 @@
 //     }
 // };
 
-
 // //============= একটা array এর সব element প্রিন্ট কর
 // let programs = ["HTML", "CSS", "JavaScript", "React", "NextJS"];
 
@@ -61,10 +58,24 @@
 //     console.log("Here is:", program)
 // };
 
-
 // //============= pattern বানাও:
 // let pattern = "";
 // for(let i = 1; i <= 5; i++){
 //     pattern += i
 //     console.log(pattern)
 // }
+
+// let pattern = "";
+// for(let i = 1; i <= 5; i++){
+//     pattern += i
+//     console.log(pattern)
+// }
+
+// Nested loop advance
+for (let i = 1; i <= 3; i++) {
+  let line = "";
+  for (let j = 1; j <= i; j++) {
+    line += j + " ";
+  }
+  console.log(line);
+}
