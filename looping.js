@@ -72,10 +72,18 @@
 // }
 
 // Nested loop advance
-for (let i = 1; i <= 3; i++) {
-  let line = "";
-  for (let j = 1; j <= i; j++) {
-    line += j + " ";
+// for (let i = 1; i <= 3; i++) {
+//   let line = "";
+//   for (let j = 1; j <= i; j++) {
+//     line += j + " ";
+//   }
+//   console.log(line);
+// }
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " is even");
+  } else {
+    console.log(i + " is odd");
   }
-  console.log(line);
 }
