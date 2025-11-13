@@ -72,3 +72,16 @@ const totalSalary = femaleSalaries.reduce((sum, salary) => sum + salary, 0);
 const averageSalary = totalSalary / femaleSalaries.length;
 
 console.log(`Average female salary: ${averageSalary}`);
+
+// Reduce method
+const cart = [
+  { name: "Apple", price: 50, quantity: 2 },
+  { name: "Orange", price: 30, quantity: 3 },
+  { name: "Banana", price: 10, quantity: 5 },
+];
+
+const totalPrice = cart.reduce((total, item) => {
+  return total + item.price * item.quantity;
+}, 0);
+
+console.log(totalPrice);
