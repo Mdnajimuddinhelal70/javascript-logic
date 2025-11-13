@@ -52,36 +52,56 @@
 // console.log(femaleNames); // ["Sara", "Lina"]
 
 //More advence
-const users = [
-  { name: "John", age: 25, gender: "male", salary: 40000 },
-  { name: "Sara", age: 22, gender: "female", salary: 35000 },
-  { name: "Mike", age: 30, gender: "male", salary: 50000 },
-  { name: "Lina", age: 28, gender: "female", salary: 45000 },
-];
+// const users = [
+//   { name: "John", age: 25, gender: "male", salary: 40000 },
+//   { name: "Sara", age: 22, gender: "female", salary: 35000 },
+//   { name: "Mike", age: 30, gender: "male", salary: 50000 },
+//   { name: "Lina", age: 28, gender: "female", salary: 45000 },
+// ];
 
-// Step 1: Only women
-const femaleUsers = users.filter((user) => user.gender === "female");
+// // Step 1: Only women
+// const femaleUsers = users.filter((user) => user.gender === "female");
 
-// Step 2: only salary
-const femaleSalaries = femaleUsers.map((user) => user.salary);
+// // Step 2: only salary
+// const femaleSalaries = femaleUsers.map((user) => user.salary);
 
-// Step 3: all salary +++
-const totalSalary = femaleSalaries.reduce((sum, salary) => sum + salary, 0);
+// // Step 3: all salary +++
+// const totalSalary = femaleSalaries.reduce((sum, salary) => sum + salary, 0);
 
-// Step 4: average count
-const averageSalary = totalSalary / femaleSalaries.length;
+// // Step 4: average count
+// const averageSalary = totalSalary / femaleSalaries.length;
 
-console.log(`Average female salary: ${averageSalary}`);
+// console.log(`Average female salary: ${averageSalary}`);
 
 // Reduce method
-const cart = [
-  { name: "Apple", price: 50, quantity: 2 },
-  { name: "Orange", price: 30, quantity: 3 },
-  { name: "Banana", price: 10, quantity: 5 },
+// const cart = [
+//   { name: "Apple", price: 50, quantity: 2 },
+//   { name: "Orange", price: 30, quantity: 3 },
+//   { name: "Banana", price: 10, quantity: 5 },
+// ];
+
+// const totalPrice = cart.reduce((total, item) => {
+//   return total + item.price * item.quantity;
+// }, 0);
+
+// console.log(totalPrice);
+
+// Advence reduce method
+const users = [
+  { name: "John", gender: "male", salary: 40000 },
+  { name: "Sara", gender: "female", salary: 35000 },
+  { name: "Mike", gender: "male", salary: 50000 },
+  { name: "Lina", gender: "female", salary: 45000 },
 ];
 
-const totalPrice = cart.reduce((total, item) => {
-  return total + item.price * item.quantity;
-}, 0);
+const groupedByGender = users.reduce((groups, user) => {
+  if (!groups[user.gender]) {
+    groups[user.gender] = [];
+  }
 
-console.log(totalPrice);
+  groups[user.gender].push(user);
+
+  return groups;
+}, {});
+
+console.log(groupedByGender);
