@@ -87,21 +87,39 @@
 // console.log(totalPrice);
 
 // Advence reduce method
-const users = [
-  { name: "John", gender: "male", salary: 40000 },
-  { name: "Sara", gender: "female", salary: 35000 },
-  { name: "Mike", gender: "male", salary: 50000 },
-  { name: "Lina", gender: "female", salary: 45000 },
-];
+// const users = [
+//   { name: "John", gender: "male", salary: 40000 },
+//   { name: "Sara", gender: "female", salary: 35000 },
+//   { name: "Mike", gender: "male", salary: 50000 },
+//   { name: "Lina", gender: "female", salary: 45000 },
+// ];
 
-const groupedByGender = users.reduce((groups, user) => {
-  if (!groups[user.gender]) {
-    groups[user.gender] = [];
-  }
+// const groupedByGender = users.reduce((groups, user) => {
+//   if (!groups[user.gender]) {
+//     groups[user.gender] = [];
+//   }
 
-  groups[user.gender].push(user);
+//   groups[user.gender].push(user);
 
-  return groups;
-}, {});
+//   return groups;
+// }, {});
 
-console.log(groupedByGender);
+// console.log(groupedByGender);
+
+// const users = [
+//   { name: "John", gender: "male", salary: 40000 },
+//   { name: "Sara", gender: "female", salary: 35000 },
+//   { name: "Mike", gender: "male", salary: 50000 },
+//   { name: "Lina", gender: "female", salary: 45000 },
+// ];
+
+// const groups = {};
+
+// for (const user of users) {
+//   if (!groups[user.gender]) {
+//     groups[user.gender] = [];
+//   }
+
+//   groups[user.gender].push(user);
+// }
+// console.log(groups);
