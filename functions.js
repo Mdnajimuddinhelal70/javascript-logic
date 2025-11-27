@@ -22,10 +22,17 @@
 // let myBmi = calculateBMI(63, 5.4)
 // console.log("Your BMI is", myBmi.toFixed(2))
 
-function addNumbers(a, b) {
-  let result = a + b;
-  return result;
+// function addNumbers(a, b) {
+//   let result = a + b;
+//   return result;
+// }
+
+// let sum = addNumbers(10, 5);
+// console.log("Total =", sum);
+
+function sayHello(name) {
+  return "Hello " + name + "!";
 }
 
-let sum = addNumbers(10, 5);
-console.log("Total =", sum);
+let message = sayHello("Najim");
+console.log(message);
