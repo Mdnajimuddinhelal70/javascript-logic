@@ -30,9 +30,23 @@
 // let sum = addNumbers(10, 5);
 // console.log("Total =", sum);
 
-function sayHello(name) {
-  return "Hello " + name + "!";
+// function sayHello(name) {
+//   return "Hello " + name + "!";
+// }
+
+// let message = sayHello("Najim");
+// console.log(message);
+
+function getEvenNumbers(numbers) {
+  let evens = [];
+
+  for (let num of numbers) {
+    if (num % 2 === 0) {
+      evens.push(num);
+    }
+  }
+
+  return evens;
 }
 
-let message = sayHello("Najim");
-console.log(message);
+console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
