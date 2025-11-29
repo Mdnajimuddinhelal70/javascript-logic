@@ -37,16 +37,33 @@
 // let message = sayHello("Najim");
 // console.log(message);
 
-function getEvenNumbers(numbers) {
-  let evens = [];
+// function getEvenNumbers(numbers) {
+//   let evens = [];
 
-  for (let num of numbers) {
-    if (num % 2 === 0) {
-      evens.push(num);
-    }
-  }
+//   for (let num of numbers) {
+//     if (num % 2 === 0) {
+//       evens.push(num);
+//     }
+//   }
 
-  return evens;
+//   return evens;
+// }
+
+// console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
+
+// function syaHi() {
+//   return "Hi";
+// }
+
+// console.log(syaHi());
+
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
 }
 
-console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
+function bye() {
+  console.log("Goodbye!");
+}
+
+greet("Najim", bye);
