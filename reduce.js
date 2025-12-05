@@ -124,27 +124,51 @@
 // }
 // console.log(groups);
 
-const users = [
-  { name: "John", gender: "male", salary: 40000 },
-  { name: "Sara", gender: "female", salary: 35000 },
-  { name: "Mike", gender: "male", salary: 50000 },
-  { name: "Lina", gender: "female", salary: 45000 },
+// const users = [
+//   { name: "John", gender: "male", salary: 40000 },
+//   { name: "Sara", gender: "female", salary: 35000 },
+//   { name: "Mike", gender: "male", salary: 50000 },
+//   { name: "Lina", gender: "female", salary: 45000 },
+// ];
+
+// const averageSalaryPerGender = users.reduce((acc, user) => {
+//   if (!acc[user.gender]) {
+//     acc[user.gender] = { total: 0, count: 0 };
+//   }
+
+//   acc[user.gender].total += user.salary;
+//   acc[user.gender].count += 1;
+
+//   return acc;
+// }, {});
+
+// for (const gender in averageSalaryPerGender) {
+//   averageSalaryPerGender[gender] =
+//     averageSalaryPerGender[gender].total / averageSalaryPerGender[gender].count;
+// }
+
+// console.log(averageSalaryPerGender);
+
+const teams = [
+  {
+    team: "A",
+    members: [
+      { name: "John", role: "dev" },
+      { name: "Sara", role: "designer" },
+    ],
+  },
+  {
+    team: "B",
+    members: [
+      { name: "Mike", role: "dev" },
+      { name: "Lina", role: "designer" },
+    ],
+  },
 ];
 
-const averageSalaryPerGender = users.reduce((acc, user) => {
-  if (!acc[user.gender]) {
-    acc[user.gender] = { total: 0, count: 0 };
-  }
+const allNames = teams.reduce((names, team) => {
+  const teamNames = team.members.map((member) => member.name);
+  return names.concat(teamNames);
+}, []);
 
-  acc[user.gender].total += user.salary;
-  acc[user.gender].count += 1;
-
-  return acc;
-}, {});
-
-for (const gender in averageSalaryPerGender) {
-  averageSalaryPerGender[gender] =
-    averageSalaryPerGender[gender].total / averageSalaryPerGender[gender].count;
-}
-
-console.log(averageSalaryPerGender);
+console.log(allNames);
