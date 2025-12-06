@@ -149,26 +149,55 @@
 
 // console.log(averageSalaryPerGender);
 
-const teams = [
+// const teams = [
+//   {
+//     team: "A",
+//     members: [
+//       { name: "John", role: "dev" },
+//       { name: "Sara", role: "designer" },
+//     ],
+//   },
+//   {
+//     team: "B",
+//     members: [
+//       { name: "Mike", role: "dev" },
+//       { name: "Lina", role: "designer" },
+//     ],
+//   },
+// ];
+
+// const allNames = teams.reduce((names, team) => {
+//   const teamNames = team.members.map((member) => member.name);
+//   return names.concat(teamNames);
+// }, []);
+
+// console.log(allNames);
+
+const teachers = [
   {
-    team: "A",
-    members: [
-      { name: "John", role: "dev" },
-      { name: "Sara", role: "designer" },
+    name: "Mr. Rahim",
+    students: [
+      { name: "Hasan", age: 12 },
+      { name: "Nila", age: 11 },
     ],
   },
   {
-    team: "B",
-    members: [
-      { name: "Mike", role: "dev" },
-      { name: "Lina", role: "designer" },
+    name: "Ms. Karima",
+    students: [
+      { name: "Rafi", age: 13 },
+      { name: "Toma", age: 12 },
+    ],
+  },
+  {
+    name: "Mr. Adnan",
+    students: [
+      { name: "Sajid", age: 14 },
+      { name: "Mim", age: 13 },
     ],
   },
 ];
 
-const allNames = teams.reduce((names, team) => {
-  const teamNames = team.members.map((member) => member.name);
-  return names.concat(teamNames);
+const allStudentNames = teachers.reduce((allNames, teacher) => {
+  const singleTeacherNames = teacher.students.map((st) => st.name);
+  return allNames.concat(singleTeacherNames);
 }, []);
-
-console.log(allNames);
