@@ -173,6 +173,35 @@
 
 // console.log(allNames);
 
+// const teachers = [
+//   {
+//     name: "Mr. Rahim",
+//     students: [
+//       { name: "Hasan", age: 12 },
+//       { name: "Nila", age: 11 },
+//     ],
+//   },
+//   {
+//     name: "Ms. Karima",
+//     students: [
+//       { name: "Rafi", age: 13 },
+//       { name: "Toma", age: 12 },
+//     ],
+//   },
+//   {
+//     name: "Mr. Adnan",
+//     students: [
+//       { name: "Sajid", age: 14 },
+//       { name: "Mim", age: 13 },
+//     ],
+//   },
+// ];
+
+// const allStudentNames = teachers.reduce((allNames, teacher) => {
+//   const singleTeacherNames = teacher.students.map((st) => st.name);
+//   return allNames.concat(singleTeacherNames);
+// }, []);
+
 const teachers = [
   {
     name: "Mr. Rahim",
@@ -197,7 +226,19 @@ const teachers = [
   },
 ];
 
-const allStudentNames = teachers.reduce((allNames, teacher) => {
-  const singleTeacherNames = teacher.students.map((st) => st.name);
-  return allNames.concat(singleTeacherNames);
-}, []);
+const studentStats = teachers
+  .flatMap((t) => t.students)
+  .reduce(
+    (stats, st) => {
+      stats.totalAge += st.age;
+      stats.count += 1;
+      stats.maxAge = Math.max(stats.maxAge, st.age);
+      stats.minAge = Math.min(stats.minAge, st.age);
+      return stats;
+    },
+    { totalAge: 0, count: 0, maxAge: -Infinity, minAge: Infinity }
+  );
+
+studentStats.avgAge = studentStats.totalAge / studentStats.count;
+
+console.log(studentStats);
