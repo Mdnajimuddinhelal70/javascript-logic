@@ -68,18 +68,37 @@
 // najimAccount.withdraw(200);
 // najimAccount.withdraw(500);
 
-function checkAccess(role) {
-  return function (action) {
-    if (role === "admin") {
-      console.log(`Admin can ${action}`);
+// function checkAccess(role) {
+//   return function (action) {
+//     if (role === "admin") {
+//       console.log(`Admin can ${action}`);
+//     } else {
+//       console.log("Access denied");
+//     }
+//   };
+// }
+
+// const adminAccess = checkAccess("admin");
+// const userAccess = checkAccess("user");
+
+// adminAccess("delete user");
+// userAccess("delete user");
+
+function limitedCounter(limit) {
+  let count = 0;
+
+  return function () {
+    if (count < limit) {
+      count++;
+      console.log(count);
     } else {
-      console.log("Access denied");
+      console.log("Limit reached");
     }
   };
 }
 
-const adminAccess = checkAccess("admin");
-const userAccess = checkAccess("user");
-
-adminAccess("delete user");
-userAccess("delete user");
+const counter = limitedCounter(3);
+counter();
+counter();
+counter();
+counter();
