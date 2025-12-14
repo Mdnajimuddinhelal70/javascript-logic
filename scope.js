@@ -42,28 +42,44 @@
 // counter();
 // counter();
 
-function createBankAccount(ownerName) {
-  let balance = 0;
+// function createBankAccount(ownerName) {
+//   let balance = 0;
 
-  return {
-    deposit(amount) {
-      balance += amount;
-      console.log(`${ownerName} balance: ${balance}`);
-    },
+//   return {
+//     deposit(amount) {
+//       balance += amount;
+//       console.log(`${ownerName} balance: ${balance}`);
+//     },
 
-    withdraw(amount) {
-      if (amount > balance) {
-        console.log("Not enough balance");
-      } else {
-        balance -= amount;
-        console.log(`${ownerName} balance: ${balance}`);
-      }
-    },
+//     withdraw(amount) {
+//       if (amount > balance) {
+//         console.log("Not enough balance");
+//       } else {
+//         balance -= amount;
+//         console.log(`${ownerName} balance: ${balance}`);
+//       }
+//     },
+//   };
+// }
+
+// const najimAccount = createBankAccount("Najim");
+
+// najimAccount.deposit(500);
+// najimAccount.withdraw(200);
+// najimAccount.withdraw(500);
+
+function checkAccess(role) {
+  return function (action) {
+    if (role === "admin") {
+      console.log(`Admin can ${action}`);
+    } else {
+      console.log("Access denied");
+    }
   };
 }
 
-const najimAccount = createBankAccount("Najim");
+const adminAccess = checkAccess("admin");
+const userAccess = checkAccess("user");
 
-najimAccount.deposit(500);
-najimAccount.withdraw(200);
-najimAccount.withdraw(500);
+adminAccess("delete user");
+userAccess("delete user");
