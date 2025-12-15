@@ -84,21 +84,21 @@
 // adminAccess("delete user");
 // userAccess("delete user");
 
-function limitedCounter(limit) {
-  let count = 0;
+// function limitedCounter(limit) {
+//   let count = 0;
 
-  return function () {
-    if (count < limit) {
-      count++;
-      console.log(count);
-    } else {
-      console.log("Limit reached");
-    }
-  };
-}
+//   return function () {
+//     if (count < limit) {
+//       count++;
+//       console.log(count);
+//     } else {
+//       console.log("Limit reached");
+//     }
+//   };
+// }
 
-const counter = limitedCounter(3);
-counter();
-counter();
-counter();
-counter();
+// const counter = limitedCounter(3);
+// counter();
+// counter();
+// counter();
+// counter();
