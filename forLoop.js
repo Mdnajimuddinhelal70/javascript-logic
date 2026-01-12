@@ -14,8 +14,19 @@
 //   console.log(key, student[key]);
 // }
 
-const numbers = [10, 20, 30];
+// const numbers = [10, 20, 30];
 
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+
+const students = [
+  { name: "Najim", age: 20 },
+  { name: "Rahim", age: 22 },
+];
+
+for (let student of students) {
+  for (let key in student) {
+    console.log(key, student[key]);
+  }
 }
