@@ -39,9 +39,20 @@
 // // Output: [1, 2, 5, 7, 9]
 
 // Sort method step 2
-const names = ["Najim", "Ali", "Zara", "Rahim"];
+// const names = ["Najim", "Ali", "Zara", "Rahim"];
 
-names.sort();
+// names.sort();
 
-console.log(names);
+// console.log(names);
 // Output: ["Ali", "Najim", "Rahim", "Zara"]
+
+// Sort method step 3
+const users = [
+  { name: "Najim", age: 22 },
+  { name: "Ali", age: 18 },
+  { name: "Rahim", age: 25 },
+];
+
+users.sort((a, b) => a.age - b.age);
+
+console.log(users);
