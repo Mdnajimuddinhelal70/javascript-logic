@@ -47,12 +47,20 @@
 // Output: ["Ali", "Najim", "Rahim", "Zara"]
 
 // Sort method step 3
-const users = [
-  { name: "Najim", age: 22 },
-  { name: "Ali", age: 18 },
-  { name: "Rahim", age: 25 },
-];
+// const users = [
+//   { name: "Najim", age: 22 },
+//   { name: "Ali", age: 18 },
+//   { name: "Rahim", age: 25 },
+// ];
 
-users.sort((a, b) => a.age - b.age);
+// users.sort((a, b) => a.age - b.age);
 
-console.log(users);
+// console.log(users);
+
+// Sort method step 4
+const numbers = [10, 3, 7, 1];
+
+const sortedNumbers = [...numbers].sort((a, b) => a - b);
+
+console.log(sortedNumbers); // [1, 3, 7, 10]
+console.log(numbers); // [10, 3, 7, 1]
