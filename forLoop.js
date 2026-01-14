@@ -31,9 +31,17 @@
 //   }
 // }
 
-const numbers = [5, 2, 9, 1, 7];
+// const numbers = [5, 2, 9, 1, 7];
 
-numbers.sort((a, b) => a - b);
+// numbers.sort((a, b) => a - b);
 
-console.log(numbers);
-// Output: [1, 2, 5, 7, 9]
+// console.log(numbers);
+// // Output: [1, 2, 5, 7, 9]
+
+// Sort method step 2
+const names = ["Najim", "Ali", "Zara", "Rahim"];
+
+names.sort();
+
+console.log(names);
+// Output: ["Ali", "Najim", "Rahim", "Zara"]
