@@ -20,13 +20,20 @@
 //   console.log(numbers[i]);
 // }
 
-const students = [
-  { name: "Najim", age: 20 },
-  { name: "Rahim", age: 22 },
-];
+// const students = [
+//   { name: "Najim", age: 20 },
+//   { name: "Rahim", age: 22 },
+// ];
 
-for (let student of students) {
-  for (let key in student) {
-    console.log(key, student[key]);
-  }
-}
+// for (let student of students) {
+//   for (let key in student) {
+//     console.log(key, student[key]);
+//   }
+// }
+
+const numbers = [5, 2, 9, 1, 7];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers);
+// Output: [1, 2, 5, 7, 9]
