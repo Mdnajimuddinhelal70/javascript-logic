@@ -66,18 +66,38 @@
 // console.log(numbers);
 
 // Sort method step 4
-const students = [
-  { name: "Najim", age: 20 },
-  { name: "Arif", age: 18 },
-  { name: "Rafi", age: 20 },
-  { name: "Bashir", age: 18 },
+// const students = [
+//   { name: "Najim", age: 20 },
+//   { name: "Arif", age: 18 },
+//   { name: "Rafi", age: 20 },
+//   { name: "Bashir", age: 18 },
+// ];
+
+// const sortedStudents = [...students].sort((a, b) => {
+//   if (a.age !== b.age) {
+//     return a.age - b.age;
+//   }
+//   return a.name.localeCompare(b.name);
+// });
+
+// console.log(sortedStudents);
+
+// Sort method step 5
+const orders = [
+  { id: 1, status: "APPROVED" },
+  { id: 2, status: "PENDING" },
+  { id: 3, status: "REJECTED" },
+  { id: 4, status: "PENDING" },
 ];
 
-const sortedStudents = [...students].sort((a, b) => {
-  if (a.age !== b.age) {
-    return a.age - b.age;
-  }
-  return a.name.localeCompare(b.name);
-});
+const statusPriority = {
+  PENDING: 1,
+  APPROVED: 2,
+  REJECTED: 3,
+};
 
-console.log(sortedStudents);
+const sortedOrders = [...orders].sort(
+  (a, b) => statusPriority[a.status] - statusPriority[b.status]
+);
+
+console.log(sortedOrders);
