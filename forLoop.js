@@ -58,9 +58,26 @@
 // console.log(users);
 
 // Sort method step 4
-const numbers = [10, 3, 7, 1];
+// const numbers = [10, 3, 7, 1];
 
-const sortedNumbers = [...numbers].sort((a, b) => a - b);
+// const sortedNumbers = [...numbers].sort((a, b) => a - b);
 
-console.log(sortedNumbers); // [1, 3, 7, 10]
-console.log(numbers); // [10, 3, 7, 1]
+// console.log(sortedNumbers);
+// console.log(numbers);
+
+// Sort method step 4
+const students = [
+  { name: "Najim", age: 20 },
+  { name: "Arif", age: 18 },
+  { name: "Rafi", age: 20 },
+  { name: "Bashir", age: 18 },
+];
+
+const sortedStudents = [...students].sort((a, b) => {
+  if (a.age !== b.age) {
+    return a.age - b.age;
+  }
+  return a.name.localeCompare(b.name);
+});
+
+console.log(sortedStudents);
