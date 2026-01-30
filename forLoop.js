@@ -83,21 +83,33 @@
 // console.log(sortedStudents);
 
 // Sort method step 5
-const orders = [
-  { id: 1, status: "APPROVED" },
-  { id: 2, status: "PENDING" },
-  { id: 3, status: "REJECTED" },
-  { id: 4, status: "PENDING" },
-];
+// const orders = [
+//   { id: 1, status: "APPROVED" },
+//   { id: 2, status: "PENDING" },
+//   { id: 3, status: "REJECTED" },
+//   { id: 4, status: "PENDING" },
+// ];
 
-const statusPriority = {
-  PENDING: 1,
-  APPROVED: 2,
-  REJECTED: 3,
-};
+// const statusPriority = {
+//   PENDING: 1,
+//   APPROVED: 2,
+//   REJECTED: 3,
+// };
 
-const sortedOrders = [...orders].sort(
-  (a, b) => statusPriority[a.status] - statusPriority[b.status]
-);
+// const sortedOrders = [...orders].sort(
+//   (a, b) => statusPriority[a.status] - statusPriority[b.status]
+// );
 
-console.log(sortedOrders);
+// console.log(sortedOrders);
+
+//Find largest number
+const numbers = [10, 45, 2, 99, 23];
+let max = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+}
+
+console.log("Max number:", max);
