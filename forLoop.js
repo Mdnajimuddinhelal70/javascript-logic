@@ -115,9 +115,22 @@
 // console.log("Max number:", max);
 
 //Star pattern
-let star = "";
+// let star = "";
 
-for (let i = 1; i <= 5; i++) {
-  star += "*";
-  console.log(star);
+// for (let i = 1; i <= 5; i++) {
+//   // star += "*";
+//   star = star + "*";
+//   console.log(star);
+// }
+
+// Find min number
+const numbers = [10, 45, 2, 99, 23];
+
+let min = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] < min) {
+    min = numbers[i];
+  }
 }
+console.log("Min number", min);
