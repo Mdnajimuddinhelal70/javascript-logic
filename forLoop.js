@@ -103,13 +103,21 @@
 // console.log(sortedOrders);
 
 //Find largest number
-const numbers = [10, 45, 2, 99, 23];
-let max = numbers[0];
+// const numbers = [10, 45, 2, 99, 23];
+// let max = numbers[0];
 
-for (let i = 1; i < numbers.length; i++) {
-  if (numbers[i] > max) {
-    max = numbers[i];
-  }
+// for (let i = 1; i < numbers.length; i++) {
+//   if (numbers[i] > max) {
+//     max = numbers[i];
+//   }
+// }
+
+// console.log("Max number:", max);
+
+//Star pattern
+let star = "";
+
+for (let i = 1; i <= 5; i++) {
+  star += "*";
+  console.log(star);
 }
-
-console.log("Max number:", max);
