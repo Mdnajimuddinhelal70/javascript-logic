@@ -16,3 +16,20 @@
 // const names = ["najim", "rahim", "karim"];
 // const upperNames = names.map((name) => name.toUpperCase());
 // console.log(upperNames);
+
+//Find the second largest number in an array
+const numbers = [10, 45, 2, 99, 23];
+
+let max = -Infinity;
+let secondMax = -Infinity;
+
+for (let num of numbers) {
+  if (num > max) {
+    secondMax = max;
+    max = num;
+  } else if (num > secondMax && num !== max) {
+    secondMax = num;
+  }
+}
+
+console.log(secondMax);

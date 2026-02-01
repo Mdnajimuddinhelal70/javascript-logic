@@ -136,13 +136,13 @@
 // console.log("Min number", min);
 
 // Find min string
-const numbers = ["Najim", "Arif", "Rafi", "Bashir"];
+// const numbers = ["Najim", "Arif", "Rafi", "Bashir"];
 
-let min = numbers[0];
+// let min = numbers[0];
 
-for (let i = 1; i < numbers.length; i++) {
-  if (numbers[i] < min) {
-    min = numbers[i];
-  }
-}
-console.log("Min string:", min);
+// for (let i = 1; i < numbers.length; i++) {
+//   if (numbers[i] < min) {
+//     min = numbers[i];
+//   }
+// }
+// console.log("Min string:", min);
