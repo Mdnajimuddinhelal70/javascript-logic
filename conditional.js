@@ -77,14 +77,26 @@
 //     console.log("Working Day")
 // }
 
-let marks = 85;
+// let marks = 85;
 
-if (marks >= 80) {
-  console.log("Grade: A+");
-} else if (marks >= 70) {
-  console.log("Grade: A");
-} else if (marks >= 60) {
-  console.log("Grade: B");
+// if (marks >= 80) {
+//   console.log("Grade: A+");
+// } else if (marks >= 70) {
+//   console.log("Grade: A");
+// } else if (marks >= 60) {
+//   console.log("Grade: B");
+// } else {
+//   console.log("Grade: C or below");
+// }
+
+// Get bigger number
+let a = 10;
+let b = 20;
+
+if (a > b) {
+  console.log(a + " is bigger");
+} else if (a < b) {
+  console.log(b + " is bigger");
 } else {
-  console.log("Grade: C or below");
+  console.log("Both are equal");
 }
