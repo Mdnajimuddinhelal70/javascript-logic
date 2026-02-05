@@ -23,12 +23,12 @@
 // console.log("Sum 1 to 10 =", total);
 
 // Factorial of a number using while loop
-let number = 5;
-let factorial = 1;
+// let number = 5;
+// let factorial = 1;
 
-while (number > 0) {
-  factorial = factorial * number;
-  number--;
-}
+// while (number > 0) {
+//   factorial = factorial * number;
+//   number--;
+// }
 
-console.log("Factorial =", factorial);
+// console.log("Factorial =", factorial);

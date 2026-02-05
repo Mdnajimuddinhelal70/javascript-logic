@@ -39,42 +39,52 @@
 //     console.log("Ghumay ghumai sopon dekh.")
 // }
 
-
 // Task one
-let marks = 45;
-if(marks >= 40){
-    console.log("Pass")
-}else{
-    console.log("Failed")
-}
+// let marks = 45;
+// if(marks >= 40){
+//     console.log("Pass")
+// }else{
+//     console.log("Failed")
+// }
 
-// Task Two P
-let age = 20;
+// // Task Two P
+// let age = 20;
 
-if(age >= 21){
-    console.log("Tui biya korta parbi")
-}else if(age >=18){
-  console.log("Tui wait kor")
-}else{
-    console.log("Ja tui chocobar kha")
-}
+// if(age >= 21){
+//     console.log("Tui biya korta parbi")
+// }else if(age >=18){
+//   console.log("Tui wait kor")
+// }else{
+//     console.log("Ja tui chocobar kha")
+// }
 
-// Task three
-let username = "Admin";
-let password = 12345
+// // Task three
+// let username = "Admin";
+// let password = 12345
 
-if(username.toLowerCase() === "Admin" && password === 12345){
-    console.log("Welcome Admin")
-}else{
-    console.log("Invalid Login")
-}
+// if(username.toLowerCase() === "Admin" && password === 12345){
+//     console.log("Welcome Admin")
+// }else{
+//     console.log("Invalid Login")
+// }
 
+// // Task Four P
+// let  day = "Saturday";
 
-// Task Four P
-let  day = "Saturday";
+// if(day === "Friday" || day === "Saturday"){
+//     console.log("Holiday")
+// }else{
+//     console.log("Working Day")
+// }
 
-if(day === "Friday" || day === "Saturday"){
-    console.log("Holiday")
-}else{
-    console.log("Working Day")
+let marks = 85;
+
+if (marks >= 80) {
+  console.log("Grade: A+");
+} else if (marks >= 70) {
+  console.log("Grade: A");
+} else if (marks >= 60) {
+  console.log("Grade: B");
+} else {
+  console.log("Grade: C or below");
 }

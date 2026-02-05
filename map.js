@@ -35,14 +35,14 @@
 // console.log(secondMax);
 
 // Numbers from 1 to 5, one missing
-const arr = [1, 2, 4, 5];
+// const arr = [1, 2, 4, 5];
 
-const n = 5;
-const expectedSum = (n * (n + 1)) / 2;
+// const n = 5;
+// const expectedSum = (n * (n + 1)) / 2;
 
-let actualSum = 0;
-for (let num of arr) {
-  actualSum += num;
-}
+// let actualSum = 0;
+// for (let num of arr) {
+//   actualSum += num;
+// }
 
-console.log(expectedSum - actualSum);
+// console.log(expectedSum - actualSum);
